@@ -1,27 +1,32 @@
 body
 {
-	margin: 0;
-	overflow-x: hidden;
+  min-width: 100%;
 }
 header {
 	width: 100%;
+	height: auto;
 	background-color: rgba(0, 0, 255, 0.25);
-	padding: 7px;
+	padding: 10px;
 	box-shadow: 0 4px 2px -2px rgba(0, 0, 255, 0.4);
 }
 header.img{
 	height:  30px;
 }
 footer {
-	padding: 10px;
-	background-color: rgba(0, 0, 255, 0.70) ;
-  	height: 50 width: 100%;
+ padding: 15px;
+  background-color: rgba(0, 0, 255, 0.2) ;
+    height: 100%;
+    width: 100%;
+    }
+#map2
+{
+  height:360px;
 }
-footer div p{
-	text-weight: bolder;
+#map1
+{
+  height:360px
 }
-#top-menu .sub-menu li {
-   padding-left: 0px;
-   padding-right: 0px;
-   width: 25%;
+
+.leaflet-control-container .leaflet-routing-container-hide {
+    display: none;
 }
