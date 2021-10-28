@@ -1,0 +1,40 @@
+body
+{
+  min-width: 100%;
+}
+header {
+	width: 100%;
+	height: auto;
+	background-color: rgba(0, 0, 255, 0.25);
+	padding: 10px;
+	box-shadow: 0 4px 2px -2px rgba(0, 0, 255, 0.4);
+}
+header.img{
+	height:  30px;
+}
+footer {
+ padding: 15px;
+  background-color: rgba(0, 0, 255, 0.2) ;
+    height: 100%;
+    width: 100%;
+    }
+#map2
+{
+  height:550px;
+}
+#map1
+{
+  height:360px
+}
+.scrollable
+{
+  height: 530px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+#listaparadas{
+  list-style-type: none;
+}
+.scrollable ul li{
+  text-align: center;
+}
