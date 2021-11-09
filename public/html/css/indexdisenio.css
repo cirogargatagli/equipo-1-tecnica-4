@@ -5,9 +5,9 @@ body
 header {
 	width: 100%;
 	height: auto;
-	background-color: rgba(0, 0, 255, 0.25);
+	background-color: #465a85;
 	padding: 10px;
-	box-shadow: 0 4px 2px -2px rgba(0, 0, 255, 0.4);
+	box-shadow: 0 4px 2px -2px #344364;
 }
 header.img{
 	height:  30px;
@@ -15,9 +15,106 @@ header.img{
 footer {
  padding: 15px;
   background-color: rgba(0, 0, 255, 0.2) ;
-    height: 100%;
     width: 100%;
     }
+footer a
+{
+  text-decoration: none;
+}
+header a
+{
+  text-decoration: none;
+}
+#test
+{
+  padding: 15px;
+  background-color: #465a85;
+  width: 100%;
+}
+#test1
+{
+  background-color: #465a85;
+  width: 100%;
+}
+#test3
+{
+  background-color: #9aa9ca;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 5px;  
+  border: 3px solid #9aa9ca;
+  margin: auto;
+}
+#fhanuie
+{
+  /*background-color: rgb(154, 169, 202, 0.4);*/
+  max-width: 100%;
+  /*-webkit-filter: brightness(0.6)contrast(3.4)hue-rotate(217deg)saturate(9.9);
+  filter: brightness(0.6)contrast(3.4)hue-rotate(217deg);*/
+}
+#test9
+{
+  position: relative;
+  text-align: center;
+  color: black;
+}
+#test2
+{
+  background-color: #9aa9ca;
+  box-sizing: border-box; 
+  border: 10px solid #9aa9ca;
+  margin: auto;
+}
+#test4
+{
+  background-color: #dde2ed;
+}
+#test5
+{
+  background-color: #dde2ed;
+
+}
+a:link {
+  color:black;
+}
+a:visited {
+  color: black;
+}
+footer a:hover {
+  color: gray;
+ /* color: black; 
+  text-decoration: underline;
+  background-color: #9aa9ca;
+  box-sizing: border-box;
+  border: 1px solid #9aa9ca;
+  box-shadow: 1px;
+  margin: auto;*/
+
+}
+header a:hover {
+  color: gray !important; 
+  /*text-decoration: underline;
+  background-color: #9aa9ca;
+  box-sizing: border-box; 
+  border: 5px solid #9aa9ca;
+  box-shadow: 10px 15px;
+  margin: auto;*/
+
+}
+p{
+  text-align: center;
+}
+input
+{
+  width: 100%;
+  border-radius: 20px;
+  padding: 15px;
+  background-color: #dde2ed;
+}
 #map2
 {
   height:550px;
@@ -37,4 +134,105 @@ footer {
 }
 .scrollable ul li{
   text-align: center;
+}
+ul li a{
+  text-decoration: none;
+}
+ul li a:hover{
+  transform: scale(1.4) !important;
+  /*color: black; 
+  text-decoration: underline;
+  background-color: #465a85;
+  box-sizing: border-box; 
+  border: 2px solid #465a85;
+  margin: auto;*/
+}
+footer ul li a:hover{
+  color: gray;
+  box-sizing: border-box;
+    margin: auto;
+}
+.colorParaBoton{
+  color: black; 
+  background-color: #465a85;
+  box-sizing: border-box; 
+  margin: auto;
+}
+.colorParaBoton a:hover{
+  text-decoration: none;
+  color: white;
+}
+#listaparadas li{
+-webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none;
+}
+.parada_Subrayada_Negrita{
+  text-decoration: underline;
+  font-weight: bold;
+}
+#test7 {
+  display: flex; 
+ justify-content: flex-start;
+}
+#test7 #numeroLinea{
+justify-content: center;
+}
+#numeroLinea p{
+  padding-right: 150px;
+}
+#logofooter {
+  display: flex; 
+ justify-content: flex-start;
+}
+#logofooter a{
+  padding-left: 20px;
+  padding-right: 80px;
+}
+#linksfooter col{
+  display: flex;
+  justify-content: center;
+}
+#test8{
+  padding-left: 340px;
+}
+#contenedor
+{
+  position: relative;
+  text-align: center;
+}
+#contenedor #test9{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#contenedor .test9parrafo{
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  right: 25%;
+  font-weight: bold;
+}
+#mapacontacto{
+  border: solid 1px #000;
+  border-radius: 10px;
+  width: 400px;
+  height:400px;
+}
+.caja{
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+  color:black; 
+  font-size: 18px; 
+  font-weight: 400; 
+  text-align: center; 
+  background: #889ccf;
+  padding: 20px; 
+  border-radius: 35px 0px 35px 0px; 
+  -moz-border-radius: 35px 0px 35px 0px; 
+  -webkit-border-radius: 35px 0px 35px 0px;
+  width: 450px;
 }
