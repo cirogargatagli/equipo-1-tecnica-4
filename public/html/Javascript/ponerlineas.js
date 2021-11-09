@@ -2,32 +2,21 @@ import { get } from "./getajax.js";
 const parametro = window.location.href;
 const param = new URL(parametro);
 var nombredelinea = param.searchParams.get("lineanombre");
-var nombredelaagencia = param.searchParams.get("nombreagencia");
 var idedelaagencia = param.searchParams.get("agenciaide");
+const sitiolinea = document.getElementById("sitioagencia");
 const listaparadas = document.getElementById("listaparadas");
-const nombreagenciaURL = document.getElementById("nombreagenciaurl");
-const nombrelineaURL = document.getElementById("nombrelineaurl");
 const numerodeLinea = document.getElementById("numeroLinea");
 /*<p class="ms-2 text-dark fw-bold">Numero de linea</p> */
 var crearInfoLinea = function(){
     let nuevonumerodelinea = document.createElement("p");
+    let nuevolinkagencia = document.createElement("a");
+    nuevolinkagencia.className="text-dark fw-bold ms-2";
+    nuevolinkagencia.href = "agenciainfo.html" + "?agenciaid=" + idedelaagencia;
+    nuevolinkagencia.innerText = "Volver a la agencia";
     nuevonumerodelinea.className = "ms-2 text-dark fw-bold";
     nuevonumerodelinea.innerText= nombredelinea;
-    let nuevonombrelineaURL = document.createElement("a");
-    nuevonombrelineaURL.className = "text-dark text-center";
-    nuevonombrelineaURL.innerText= nombredelinea;
-    nuevonombrelineaURL.href = "#";
-    let nuevonombreagenciaURL = document.createElement("a");
-    nuevonombreagenciaURL.className = "text-dark text-center";
-    nuevonombreagenciaURL.innerText = nombredelaagencia.substring(0,16) + "...";
-    nuevonombreagenciaURL.href = "agenciainfo.html?agenciaid=" + idedelaagencia;
-    if(nuevonombreagenciaURL.innerText.length == 0)
-    {
-        nuevonombreagenciaURL.innerText = "Agencia";
-    }
+    sitiolinea.appendChild(nuevolinkagencia);
     numerodeLinea.appendChild(nuevonumerodelinea);
-    nombrelineaURL.appendChild(nuevonombrelineaURL);
-    nombreagenciaURL.appendChild(nuevonombreagenciaURL);
 }
 crearInfoLinea(); 
 var urldelineaparadas = ""
@@ -58,13 +47,15 @@ get("https://api.npoint.io/eff65b985e9ac4a03d76")
                                     nuevoLiSeparador.appendChild(imagenSeparador);
                                     nuevoLi.onclick = function(){
                                             mapalinea.setView([parada.lat,parada.lon], 16);
+                                            listaparadas.querySelectorAll("li").forEach(li => {
+                                                li.classList.remove("parada_Subrayada_Negrita");
+                                            })
+                                            nuevoLi.classList.add("parada_Subrayada_Negrita");
                                     }
                                     nuevoLi.onmouseover = function(){
-                                        this.style.fontWeight = "bold";
                                         this.style.textDecoration = "underline";
                                     }
                                     nuevoLi.onmouseout = function(){
-                                        this.style.fontWeight = "normal";
                                         this.style.textDecoration = "none";
                                     }
                                     L.marker([parada.lat,parada.lon], {icon: iconoparada}).addTo(mapalinea).bindPopup(parada.stop_name.replace('?','Ñ'));

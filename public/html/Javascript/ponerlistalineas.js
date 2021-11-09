@@ -8,9 +8,9 @@ var listadeLineas = document.getElementById("listadelineas");
                     let nuevoA = document.createElement("a");
                     let nombredeLinea = document.createTextNode(routes[i].route_short_name.replace('?','Ñ'));
                     nuevoA.appendChild(nombredeLinea);
-                    nuevoA.className = "text-decoration-none fw-bold text-dark";
-                    nuevoA.href="infolinea.html" + "?lineanombre=" + routes[i].route_short_name + "&nombreagencia=" + "Agencia" +"&agenciaide=" + routes[i].agency_id;
-                    nuevoLi.className = "bg-info badge text-wrap rounded fw-bold mx-2";
+                    nuevoA.className = "fw-bold colorParaBoton";
+                    nuevoA.href="infolinea.html" + "?lineanombre=" + routes[i].route_short_name +"&agenciaide=" + routes[i].agency_id;
+                    nuevoLi.className = "colorParaBoton badge text-wrap rounded fw-bold mx-2";
                     nuevoLi.appendChild(nuevoA);
                     listadeLineas.appendChild(nuevoLi);
             }

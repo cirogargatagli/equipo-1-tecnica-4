@@ -6,9 +6,9 @@ var agregarAgencias = function(nombre,id){
     let nuevoA = document.createElement("a");
     let nombreAgencia = document.createTextNode(nombre.replace('?','Ñ'));
     nuevoA.appendChild(nombreAgencia);
-    nuevoA.className = "text-decoration-none fw-bold text-dark";
+    nuevoA.className = "fw-bold colorParaBoton";
     nuevoA.href="agenciainfo.html" + "?agenciaid=" + id;
-    nuevoLi.className = "bg-info badge text-wrap rounded fw-bold mx-2";
+    nuevoLi.className = "colorParaBoton badge text-wrap rounded fw-bold mx-2";
     nuevoLi.appendChild(nuevoA);
     listaAgencias.appendChild(nuevoLi);
 }
