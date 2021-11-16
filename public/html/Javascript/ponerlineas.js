@@ -10,9 +10,11 @@ const numerodeLinea = document.getElementById("numeroLinea");
 var crearInfoLinea = function(){
     let nuevonumerodelinea = document.createElement("p");
     let nuevolinkagencia = document.createElement("a");
+    let iconoVolver = document.createElement("i");
     nuevolinkagencia.className="text-dark fw-bold ms-2";
     nuevolinkagencia.href = "agenciainfo.html" + "?agenciaid=" + idedelaagencia;
-    nuevolinkagencia.innerText = "Volver a la agencia";
+    iconoVolver.className="fas fa-arrow-left";
+    nuevolinkagencia.appendChild(iconoVolver);
     nuevonumerodelinea.className = "ms-2 text-dark fw-bold";
     nuevonumerodelinea.innerText= nombredelinea;
     sitiolinea.appendChild(nuevolinkagencia);
